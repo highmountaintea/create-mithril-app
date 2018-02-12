@@ -1,3 +1,4 @@
 const m = require("mithril");
+const MainView = require('./MainView');
 
-m.render(document.body, "Hello world");
+m.mount(document.body, { view: MainView });
