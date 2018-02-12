@@ -9,5 +9,9 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 
+# build and temp folders
+build/
+temp/
+
 # dotenv environment variables file
 .env
