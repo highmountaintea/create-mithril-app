@@ -4,8 +4,26 @@ let port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 let app = express();
 
-app.use(express.static('./temp'));
-app.use(express.static('./public'));
+if (process.env.NODE_ENV !== 'development') {
+  // add extra config into webpackConfig before using it in dev mode
+  const webpack = require('webpack');
+  const middleware = require('webpack-dev-middleware');
+  const webpackconfig = require('../webpack.config');
+  // webpackconfig.plugins.push(new webpack.optimize.OccurenceOrderPlugin());
+  webpackconfig.plugins.push(new webpack.HotModuleReplacementPlugin());
+  webpackconfig.plugins.push(new webpack.NoEmitOnErrorsPlugin());
+  webpackconfig.entry.app.push('webpack-hot-middleware/client?reload=true');
+  const compiler = webpack(webpackconfig);
+
+  app.use(middleware(compiler, {
+    noInfo: true, publicPath: webpackconfig.output.publicPath,
+  }));
+
+  app.use(require("webpack-hot-middleware")(compiler));
+  app.use(express.static('./public'));
+} else {
+  app.use(express.static('./build'));
+}
 
 // example API handler
 app.get('/api/test', (req, res) => {

@@ -1,11 +1,16 @@
+const path = require('path');
+
 module.exports = {
   entry: {
-    [`app.js`]: ["./client/index.js"],
+    app: ["./client/index.js"],
   },
   output: {
-    filename: "temp/static/[name]",
+    filename: "static/app.js",
+    path: path.resolve(__dirname, 'build'),
+    publicPath: "/",
   },
   devtool: 'source-map',
+  plugins: [],
   module: {
     loaders: [
       {
