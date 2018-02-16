@@ -6,3 +6,8 @@ build/
 
 # dotenv environment variables file
 .env
+
+# sampleApp ignores
+sampleApp/node_modules/
+sampleApp/build/
+sampleApp/.env

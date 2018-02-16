@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
+const path = require('path');
 const fs = require('fs-extra');
 
-async function main(folder) {
+async function main(modulefolder, folder) {
+  let sampleFolder = path.join(path.dirname(modulefolder), 'sampleApp');
   // create folder, error out if already exists
   try {
     await fs.mkdir(folder);
@@ -13,7 +15,7 @@ async function main(folder) {
   }
   // copy sampleApp over
   try {
-    await fs.copy('sampleApp', folder);
+    await fs.copy(sampleFolder, folder);
   } catch (e) {
     console.error(e);
     console.error('Unable to copy sampleApp into newly created directory.');
@@ -27,4 +29,5 @@ async function main(folder) {
   console.log('npm run dev');  
 }
 
-main(process.argv[2]);
+// console.log(process.argv);
+main(process.argv[1], process.argv[2]);
