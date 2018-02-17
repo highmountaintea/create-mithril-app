@@ -1,6 +1,6 @@
 {
   "name": "create-mithril-app",
-  "version": "0.2.7",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,6 @@
   "devDependencies": {},
   "dependencies": {
     "fs-extra": "^5.0.0",
-    "fsbin": "^0.1.0"
+    "fsbin": "^1.0.0"
   }
 }
