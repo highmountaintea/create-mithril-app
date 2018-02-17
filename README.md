@@ -45,3 +45,7 @@ The created project comes with two webpack files, one for development, one for b
 ## Build
 
 `npm run build` would create the deployable files in the build directory.
+
+## Special Thanks
+
+To [mithril.js team](https://mithril.js.org/simple-application.html) for building such an interesting framework. To `create-react-app` for the inspiration.
