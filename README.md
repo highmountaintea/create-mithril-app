@@ -1,4 +1,5 @@
-# create-mithril-app - sets up a mithril project with webpack
+# create-mithril-app - Sets up a mithril.js project with webpack
+
 [![npm package](https://nodei.co/npm/create-mithril-app.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/create-mithril-app/)
 
 Creates a mithril.js project for you.

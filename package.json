@@ -1,7 +1,7 @@
 {
   "name": "create-mithril-app",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Sets up a mithril.js project with webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
