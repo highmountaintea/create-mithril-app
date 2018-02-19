@@ -1,6 +1,6 @@
 {
   "name": "create-mithril-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sets up a mithril.js project with webpack",
   "main": "index.js",
   "scripts": {

@@ -47,6 +47,12 @@ The created project comes with two webpack files, one for development, one for b
 
 `npm run build` would create the deployable files in the build directory.
 
+## Release Logs
+
+* 1.0.3 - Build files are now minified by default, and build pipeline is configurable.
+* 1.0.0 - Bumped to 1.0.0 after going through more field testing.
+* 0.2.4 - Fully working and supporting dev and build pipeline.
+
 ## Special Thanks
 
 To [mithril.js team](https://mithril.js.org/simple-application.html) for building such an interesting framework. To `create-react-app` for the inspiration.
