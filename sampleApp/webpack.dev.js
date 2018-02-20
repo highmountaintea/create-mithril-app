@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: "/",
   },
+  devtool: 'source-map',
   devServer: {
     port: 8080,
     historyApiFallback: {
