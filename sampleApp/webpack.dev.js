@@ -1,20 +1,18 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: ["./client/index.js"],
+    app: ['./client/index.js', 'webpack-hot-middleware/client?reload=true'],
   },
   output: {
-    filename: "static/app.js",
+    filename: 'static/app.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: "/",
+    publicPath: '/',
   },
   devtool: 'source-map',
-  devServer: {
-    port: 8080,
-    historyApiFallback: {
-      index: 'index.html',
-    },
-    contentBase: 'public',
-  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
 };
