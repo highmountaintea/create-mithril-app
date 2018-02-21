@@ -6,12 +6,16 @@ const babel = true;
 const minify = true;
 const createMap = false;
 
-let loaders = [];
-if (babel) loaders.push({
+let rules = [];
+if (babel) rules.push({
+  test: /\.js$/,
   exclude: /node_modules/,
-  loader: 'babel-loader',
-  query: {
-    presets: ['env'],
+  use : {
+    loader: 'babel-loader',
+    options: {
+      presets: ['env'],
+      plugins: ['transform-object-rest-spread'],
+    },
   },
 });
 
@@ -34,6 +38,6 @@ module.exports = {
   devtool: devtools,
   plugins: plugins,
   module: {
-    loaders: loaders,
+    rules: rules,
   },
 };
