@@ -47,6 +47,10 @@ The created project comes with two webpack files, one for development, one for b
 
 `npm run build` would create the deployable files in the build directory.
 
+## Server-side API
+
+`create-mithril-app` is designed for developing client side applications that access APIs remotely. It can easily integrate with a backend server too. Please see [Server setup](https://github.com/johnfliu818/create-mithril-app/blob/master/server-setup.md) for the sample API server that comes with this app.
+
 ## Release Logs
 
 * 1.0.6 - Added Babel to dev server, and supports spread operator.

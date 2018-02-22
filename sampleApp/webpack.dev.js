@@ -1,6 +1,6 @@
 const path = require('path');
 
-const port = 8080;
+const port = 8020;
 const openBrowser = true;
 const babel = true;
 
@@ -27,7 +27,7 @@ module.exports = {
     publicPath: "/",
   },
   // proxy: {
-  //   "/api": "http://localhost:3000"
+  //   "/api": "http://localhost:3750"
   // },
   devtool: 'source-map',
   devServer: {
