@@ -1,5 +1,7 @@
 const path = require('path');
 
+const port = 8080;
+const openBrowser = true;
 const babel = true;
 
 let rules = [];
@@ -15,7 +17,6 @@ if (babel) rules.push({
   },
 });
 
-
 module.exports = {
   entry: {
     app: ["./client/index.js"],
@@ -25,9 +26,13 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: "/",
   },
+  // proxy: {
+  //   "/api": "http://localhost:3000"
+  // },
   devtool: 'source-map',
   devServer: {
-    port: 8080,
+    port: port,
+    open: openBrowser,
     historyApiFallback: {
       index: 'index.html',
     },
