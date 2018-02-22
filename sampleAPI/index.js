@@ -21,14 +21,14 @@ app.get('/api/test', cors(corsOptions), (req, res) => {
   setTimeout(() => {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ success: true }));
-  }, 1500);
+  }, 1000);
 });
 
 app.get('/api/nocors', (req, res) => {
     setTimeout(() => {
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify({ success: true }));
-    }, 1500);
+    }, 1000);
 });
 
 app.listen(port, function () {
