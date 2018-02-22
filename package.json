@@ -1,13 +1,14 @@
 {
   "name": "create-mithril-app",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Sets up a mithril.js project with webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "create-mithril-app": "./index.js"
+    "create-mithril-app": "./index.js",
+    "create-mithril-server": "./deployapi.js"
   },
   "repository": {
     "type": "git",

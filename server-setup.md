@@ -5,9 +5,9 @@
 
 ## Usage
 
-`create-mithril-app` comes with another command `create-mithril-app-api`. It creates a sample API server. In the terminal, type the following:
+`create-mithril-app` comes with another command `create-mithril-server`. It creates a sample API server. In the terminal, type the following:
 ```
-create-mithril-app-api <directory>
+create-mithril-server <directory>
 cd <directory>
 npm install
 npm run dev
