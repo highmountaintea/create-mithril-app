@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-This would create a mithril.js project in the directory specified, install the appopriate modules, and run the skeleton app on port 8080. Open your browser to http://localhost:8080 and you should see a `Hello World !!` screen.
+This would create a mithril.js project in the directory specified, install the appopriate modules, and run the skeleton app on port 8020. Open your browser to http://localhost:8020 and you should see a `Hello World !!` screen.
 
 This mithril.js project is set up with webpack-dev-server, so when you start editing the project with your favorite code editor, your browser would reflect the changes instantly.
 

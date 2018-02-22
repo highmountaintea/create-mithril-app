@@ -26,9 +26,6 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: "/",
   },
-  // proxy: {
-  //   "/api": "http://localhost:3750"
-  // },
   devtool: 'source-map',
   devServer: {
     port: port,
@@ -36,6 +33,9 @@ module.exports = {
     historyApiFallback: {
       index: 'index.html',
     },
+    // proxy: {
+    //   "/api": "http://localhost:3750"
+    // },
     contentBase: 'public',
   },
   module: {
