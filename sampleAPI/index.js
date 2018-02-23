@@ -7,28 +7,17 @@ let port = 3750;
 let app = express();
 
 let corsOptions = {
-    origin: function (origin, callback) {
-      if (origin && origin.match(/^http:\/\/(localhost|127.0.0.1)(:\d+)?$/) != null) {
-        callback(null, true)
-      } else {
-        callback(new Error('Not allowed by CORS'))
-      }
-    }
-}
+  origin: /:\/\/(localhost|127.0.0.1)(:\d+)?$/
+};
+
+app.use(cors(corsOptions));
 
 // example API handler
-app.get('/api/test', cors(corsOptions), (req, res) => {
+app.get('/api/test', (req, res) => {
   setTimeout(() => {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ success: true }));
   }, 1000);
-});
-
-app.get('/api/nocors', (req, res) => {
-    setTimeout(() => {
-      res.setHeader('Content-Type', 'application/json');
-      res.send(JSON.stringify({ success: true }));
-    }, 1000);
 });
 
 app.listen(port, function () {

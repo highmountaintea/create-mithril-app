@@ -1,4 +1,4 @@
-const m = require("mithril");
+const m = require('mithril');
 
 const model = require('./model');
 
