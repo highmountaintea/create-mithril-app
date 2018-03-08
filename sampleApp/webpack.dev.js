@@ -4,22 +4,26 @@ const port = 8020;
 const openBrowser = true;
 const babel = true;
 
+let app = ['./client/index.js'];
 let rules = [];
-if (babel) rules.push({
-  test: /\.js$/,
-  exclude: /node_modules/,
-  use : {
-    loader: 'babel-loader',
-    options: {
-      presets: ['env'],
-      plugins: ['transform-object-rest-spread'],
+if (babel) {
+  app.unshift('babel-polyfill');
+  rules.push({
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use : {
+      loader: 'babel-loader',
+      options: {
+        presets: ['env'],
+        plugins: ['transform-object-rest-spread'],
+      },
     },
-  },
-});
+  });
+}
 
 module.exports = {
   entry: {
-    app: ["./client/index.js"],
+    app: app,
   },
   output: {
     filename: "static/app.js",

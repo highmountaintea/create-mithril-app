@@ -6,18 +6,22 @@ const babel = true;
 const minify = true;
 const createMap = false;
 
+let app = ['./client/index.js'];
 let rules = [];
-if (babel) rules.push({
-  test: /\.js$/,
-  exclude: /node_modules/,
-  use : {
-    loader: 'babel-loader',
-    options: {
-      presets: ['env'],
-      plugins: ['transform-object-rest-spread'],
+if (babel) {
+  app.unshift('babel-polyfill');
+  rules.push({
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use : {
+      loader: 'babel-loader',
+      options: {
+        presets: ['env'],
+        plugins: ['transform-object-rest-spread'],
+      },
     },
-  },
-});
+  });
+}
 
 let plugins = [];
 if (minify) plugins.push(new uglifyPlugin({ minimize: true }));
@@ -28,7 +32,7 @@ if (createMap) devtools = 'source-map';
 
 module.exports = {
   entry: {
-    app: ["./client/index.js"],
+    app: app,
   },
   output: {
     filename: "static/app.js",
