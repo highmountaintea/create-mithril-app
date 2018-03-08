@@ -53,6 +53,7 @@ The created project comes with two webpack files, one for development, one for b
 
 ## Release Logs
 
+* 1.0.11 - fixed async/await bug
 * 1.0.9 - Added `create-mithril-server`
 * 1.0.6 - Added Babel to dev server, and supports spread operator.
 * 1.0.5 - Fixed breakpoint debugging in dev mode
