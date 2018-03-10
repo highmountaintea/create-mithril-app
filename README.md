@@ -6,7 +6,7 @@ Creates a mithril.js project for you.
 
 ## Usage
 
-First install this app with `npm i -g create-mithril-app`, then type the following:
+First install this app with `npm i -g create-mithril-app@latest`, then type the following:
 ```
 create-mithril-app <directory>
 cd <directory>
