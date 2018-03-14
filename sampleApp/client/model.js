@@ -5,7 +5,7 @@ let result = null;
 // making request on example API
 m.request({
   method: 'GET',
-  url: 'http://localhost:3750/api/test',
+  url: MITHRIL_SERVER_URL + '/api/test',
 })
 .then((data) => {
   result = data;

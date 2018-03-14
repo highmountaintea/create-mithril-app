@@ -1,10 +1,21 @@
 const path = require('path');
+require('dotenv').config({ path: path.resolve(process.cwd(), '.env.production') });
+require('dotenv').config();
+const webpack = require('webpack');
 const uglifyPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 
 // toggle the following 3 config settings to customize build
 const babel = true;
 const minify = true;
 const createMap = false;
+
+// inject envs
+let plugins = [];
+let envs = {};
+Object.keys(process.env).filter(key => key.startsWith('MITHRIL_')).forEach(key => {
+  envs[key] = JSON.stringify(process.env[key]);
+});
+plugins.push(new webpack.DefinePlugin(envs));
 
 let app = ['./client/index.js'];
 let rules = [];
@@ -23,7 +34,6 @@ if (babel) {
   });
 }
 
-let plugins = [];
 if (minify) plugins.push(new uglifyPlugin({ minimize: true }));
 
 let devtools = undefined;
