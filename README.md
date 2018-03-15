@@ -49,7 +49,7 @@ The created project comes with two webpack files, one for development, one for b
 
 ## Server-side API
 
-`create-mithril-app` is designed for developing client side applications that access APIs remotely. It can easily integrate with a backend server too. Please see [Server setup](https://github.com/johnfliu818/create-mithril-app/blob/master/server-setup.md) for the sample API server that comes with this app.
+`create-mithril-app` is designed for developing client side applications that access APIs remotely. It can easily integrate with a backend server too. Please see [Server setup](https://github.com/highmountaintea/create-mithril-app/blob/master/server-setup.md) for the sample API server that comes with this app.
 
 ## Release Logs
 

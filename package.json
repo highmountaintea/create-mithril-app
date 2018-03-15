@@ -1,6 +1,6 @@
 {
   "name": "create-mithril-app",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "Sets up a mithril.js project with webpack",
   "main": "index.js",
   "scripts": {
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnfliu818/create-mithril-app.git"
+    "url": "git+https://github.com/highmountaintea/create-mithril-app.git"
   },
   "author": "johnfliu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/johnfliu818/create-mithril-app/issues"
+    "url": "https://github.com/highmountaintea/create-mithril-app/issues"
   },
-  "homepage": "https://github.com/johnfliu818/create-mithril-app#readme",
+  "homepage": "https://github.com/highmountaintea/create-mithril-app#readme",
   "devDependencies": {},
   "dependencies": {
     "fs-extra": "^5.0.0",
