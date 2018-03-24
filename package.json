@@ -1,9 +1,11 @@
 {
   "name": "create-mithril-app",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Sets up a mithril.js project with webpack",
+  "keywords": ["mithril", "scaffold", "webpack", "webpack dev server", "live reload", "bundler"],
   "main": "index.js",
   "scripts": {
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
@@ -23,6 +25,6 @@
   "devDependencies": {},
   "dependencies": {
     "fs-extra": "^5.0.0",
-    "fsbin": "^1.0.0"
+    "fsbin": "^1.0.5"
   }
 }

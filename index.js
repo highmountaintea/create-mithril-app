@@ -30,4 +30,8 @@ async function main(modulefolder, folder) {
 }
 
 // console.log(process.argv);
+if (process.argv.length < 3) {
+  console.log('create-mithril-app <foldername>');
+  process.exit(1);
+}
 main(process.argv[1], process.argv[2]);
