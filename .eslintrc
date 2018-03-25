@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-var": "off",
+    "linebreak-style": "off",
+    "vars-on-top": "off",
+    "no-mixed-operators": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "camelcase": "off",
+    "object-shorthand": "off",
+    "no-else-return": "off",
+    "prefer-template": "off",
+    "func-names": "off",
+    "prefer-const": "off",
+    "prefer-destructuring": "off",
+    "object-curly-newline": "off",
+    "no-console": "off"
+  }
+}

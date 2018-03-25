@@ -1,12 +1,19 @@
 {
   "name": "create-mithril-app",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Sets up a mithril.js project with webpack",
-  "keywords": ["mithril", "scaffold", "webpack", "webpack dev server", "live reload", "bundler"],
+  "keywords": [
+    "mithril",
+    "scaffold",
+    "webpack",
+    "webpack dev server",
+    "live reload",
+    "bundler"
+  ],
   "main": "index.js",
   "scripts": {
-    "start": "index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node index.js test2 && fsbin remove test2"
   },
   "bin": {
     "create-mithril-app": "./index.js",
@@ -22,9 +29,13 @@
     "url": "https://github.com/highmountaintea/create-mithril-app/issues"
   },
   "homepage": "https://github.com/highmountaintea/create-mithril-app#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0"
+  },
   "dependencies": {
     "fs-extra": "^5.0.0",
-    "fsbin": "^1.0.5"
+    "fsbin": "^1.0.6"
   }
 }

@@ -21,12 +21,12 @@ async function main(modulefolder, folder) {
     console.error('Unable to copy sampleApp into newly created directory.');
     process.exit(1);
   }
-  // display done, npm install to 
+  // display done, npm install to
   console.log('create-mithril-app done.');
   console.log('== to start ==');
   console.log('cd ' + folder);
   console.log('npm install');
-  console.log('npm run dev');  
+  console.log('npm run dev');
 }
 
 // console.log(process.argv);
