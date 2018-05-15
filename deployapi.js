@@ -3,8 +3,9 @@
 const path = require('path');
 const fs = require('fs-extra');
 
-async function main(modulefolder, folder) {
-  let sampleFolder = path.join(path.dirname(modulefolder), 'sampleAPI');
+async function main(folder) {
+  let modulefolder = path.dirname(require.resolve('create-mithril-app'));
+  let sampleFolder = path.join(modulefolder, 'sampleAPI');
   // create folder, error out if already exists
   try {
     await fs.mkdir(folder);
@@ -30,4 +31,4 @@ async function main(modulefolder, folder) {
 }
 
 // console.log(process.argv);
-main(process.argv[1], process.argv[2]);
+main(process.argv[2]);
