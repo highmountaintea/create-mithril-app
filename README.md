@@ -53,6 +53,7 @@ The created project comes with two webpack files, one for development, one for b
 
 ## Release Logs
 
+* 1.0.24 - updated to webpack 4
 * 1.0.21 - fixed path not found issue under Linux
 * 1.0.14 - now can inject environment variables via .env, .env.development, and .env.production
 * 1.0.11 - fixed async/await bug
