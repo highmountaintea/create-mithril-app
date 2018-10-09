@@ -2,11 +2,9 @@ const path = require('path');
 require('dotenv').config({ path: path.resolve(process.cwd(), '.env.production') });
 require('dotenv').config();
 const webpack = require('webpack');
-const uglifyPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
 
 // toggle the following 3 config settings to customize build
 const babel = true;
-const minify = true;
 const createMap = false;
 
 // inject envs
@@ -20,21 +18,19 @@ plugins.push(new webpack.DefinePlugin(envs));
 let app = ['./client/index.js'];
 let rules = [];
 if (babel) {
-  app.unshift('babel-polyfill');
+  app.unshift('@babel/polyfill');
   rules.push({
     test: /\.js$/,
     exclude: /node_modules/,
-    use : {
+    use: {
       loader: 'babel-loader',
       options: {
-        presets: ['env'],
-        plugins: ['transform-object-rest-spread'],
+        presets: ['@babel/preset-env'],
+        plugins: ['@babel/plugin-proposal-object-rest-spread'],
       },
     },
   });
 }
-
-if (minify) plugins.push(new uglifyPlugin({ minimize: true }));
 
 let devtools = undefined;
 if (createMap) devtools = 'source-map';
@@ -49,6 +45,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: "/",
   },
+  mode: 'production',
   devtool: devtools,
   plugins: plugins,
   module: {

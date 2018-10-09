@@ -18,15 +18,15 @@ plugins.push(new webpack.DefinePlugin(envs));
 let app = ['./client/index.js'];
 let rules = [];
 if (babel) {
-  app.unshift('babel-polyfill');
+  app.unshift('@babel/polyfill');
   rules.push({
     test: /\.js$/,
     exclude: /node_modules/,
-    use : {
+    use: {
       loader: 'babel-loader',
       options: {
-        presets: ['env'],
-        plugins: ['transform-object-rest-spread'],
+        presets: ['@babel/preset-env'],
+        plugins: ['@babel/plugin-proposal-object-rest-spread'],
       },
     },
   });
@@ -41,6 +41,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     publicPath: "/",
   },
+  mode: 'development',
   devtool: 'source-map',
   devServer: {
     port: port,
