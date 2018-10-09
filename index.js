@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs-extra');
 
 async function main(folder) {
-  let modulefolder = path.dirname(require.resolve('create-mithril-app'));
+  let modulefolder = __dirname;
   // console.log(modulefolder);
   let sampleFolder = path.join(modulefolder, 'sampleApp');
   // console.log(sampleFolder);
@@ -13,9 +13,18 @@ async function main(folder) {
   try {
     await fs.mkdir(folder);
   } catch (e) {
-    console.error(e.message);
-    console.error('Unable to create directory ' + folder + '. Make sure it does not already exist.');
-    process.exit(1);
+    try {
+      let files = await fs.readdir(folder);
+      // console.log(files);
+      let invalidFiles = files.filter(f => !['.git'].includes(f));
+      // console.log(invalidFiles);
+      if (invalidFiles.length > 0) throw new Error('directory not empty');
+    } catch (e2) {
+      console.error(e.message);
+      console.error(`Unable to create directory '${folder}'.`);
+      console.error(`create-mithril-app will only proceed if the target directory is empty or does not exist.`);
+      process.exit(1);  
+    }
   }
   // copy sampleApp over
   try {
