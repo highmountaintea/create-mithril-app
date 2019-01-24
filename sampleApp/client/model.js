@@ -1,4 +1,4 @@
-const m = require('mithril');
+import m from 'mithril';
 
 let result = null;
 
@@ -11,8 +11,6 @@ m.request({
   result = data;
 });
 
-function getResult() {
+export function getResult() {
   return result;
 }
-
-exports.getResult = getResult;

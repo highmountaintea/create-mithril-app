@@ -1,4 +1,4 @@
-const m = require('mithril');
-const MainView = require('./MainView');
+import m from 'mithril';
+import { MainView } from './MainView';
 
 m.mount(document.body, { view: MainView });
