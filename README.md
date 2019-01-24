@@ -20,6 +20,8 @@ This mithril.js project is set up with webpack-dev-server, so when you start edi
 
 **Note** create-mithril-app can also be run using `npx`
 
+**Note** `npm i -g create-mithril-app@next` will install the project creator for mithril 2.0 rc environment instead.
+
 ## Purpose
 
 I feel mithril.js can benefit from a battery-included tool to set up a project. This tool creates a project with the following:
