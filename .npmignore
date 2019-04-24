@@ -11,3 +11,4 @@ build/
 sampleApp/node_modules/
 sampleApp/build/
 sampleApp/.env
+sampleAPI/node_modules/
