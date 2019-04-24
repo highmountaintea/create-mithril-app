@@ -28,10 +28,10 @@
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.4",
-    "dotenv": "^5.0.1",
-    "fsbin": "^1.0.7",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "dotenv": "^7.0.0",
+    "fsbin": "^1.0.8",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1"
   }
 }
