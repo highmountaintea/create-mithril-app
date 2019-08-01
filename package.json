@@ -30,19 +30,19 @@
   },
   "homepage": "https://github.com/highmountaintea/create-mithril-app#readme",
   "devDependencies": {
-    "body-parser": "^1.18.3",
-    "chai": "^4.1.2",
-    "cors": "^2.8.4",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "express": "^4.16.3",
-    "mocha": "^5.1.1",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "express": "^4.17.1",
+    "mocha": "^6.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
   "dependencies": {
-    "fs-extra": "^7.0.1",
-    "fsbin": "^1.0.8"
+    "fs-extra": "^8.1.0",
+    "fsbin": "^1.0.9"
   }
 }
