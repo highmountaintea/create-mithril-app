@@ -6,7 +6,7 @@ const fs = require('fs-extra');
 async function main(folder) {
   let modulefolder = __dirname;
   // console.log(modulefolder);
-  let sampleFolder = path.join(modulefolder, 'sampleApp');
+  let sampleFolder = path.join(modulefolder, 'node_modules/sample-mithril-app');
   // console.log(sampleFolder);
   // process.exit(1);
   // create folder, error out if already exists
@@ -29,6 +29,10 @@ async function main(folder) {
   // copy sampleApp over
   try {
     await fs.copy(sampleFolder, folder);
+    let { scripts, dependencies, devDependencies } = JSON.parse(await fs.readFile(path.join(folder, 'package.json')));
+    let packageJson = { name: 'sample-mithril-app', version: '0.1.0', scripts, dependencies, devDependencies };
+    await fs.writeFile(path.join(folder, 'package.json'), JSON.stringify(packageJson, null, '  '));
+    await fs.rename(path.join(folder, '.gitignore.sample'), path.join(folder, '.gitignore'));
   } catch (e) {
     console.error(e);
     console.error('Unable to copy sampleApp into newly created directory.');
