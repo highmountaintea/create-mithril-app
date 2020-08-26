@@ -1,6 +1,6 @@
 {
   "name": "create-mithril-app",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "description": "Sets up a mithril.js project with webpack",
   "keywords": [
     "mithril",
@@ -33,17 +33,17 @@
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "cors": "^2.8.5",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "express": "^4.17.1",
-    "mocha": "^6.2.0",
+    "mocha": "^8.1.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0",
-    "fsbin": "^1.0.9",
-    "sample-mithril-app": "^1.0.6"
+    "fs-extra": "^9.0.1",
+    "fsbin": "^1.0.10",
+    "sample-mithril-app": "^1.0.7"
   }
 }
