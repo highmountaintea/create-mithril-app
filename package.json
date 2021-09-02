@@ -1,6 +1,6 @@
 {
   "name": "create-mithril-app",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Sets up a mithril.js project with webpack",
   "keywords": [
     "mithril",
@@ -31,15 +31,15 @@
   "homepage": "https://github.com/highmountaintea/create-mithril-app#readme",
   "devDependencies": {
     "body-parser": "^1.19.0",
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "cors": "^2.8.5",
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
     "express": "^4.17.1",
-    "mocha": "^8.1.2",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "mocha": "^9.1.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
   },
   "dependencies": {
     "fs-extra": "^9.0.1",
