@@ -1,6 +1,6 @@
 {
   "name": "create-mithril-app",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Sets up a mithril.js project with webpack",
   "keywords": [
     "mithril",
@@ -44,6 +44,6 @@
   "dependencies": {
     "fs-extra": "^9.0.1",
     "fsbin": "^1.0.10",
-    "sample-mithril-app": "^1.0.7"
+    "sample-mithril-app": "^1.0.8"
   }
 }
