@@ -1,12 +1,8 @@
-# create-mithril-app - Sets up a mithril.js project with webpack
+# create-mithril-app
 
-[![npm package](https://nodei.co/npm/create-mithril-app.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/create-mithril-app/)
+Sets up a mithril.js project for you, with webpack already configured.
 
-Creates a mithril.js project for you.
-
-## Usage
-
-First install this app with `npm i -g create-mithril-app@latest`, then type the following:
+Install with `npm i -g create-mithril-app`, then type the following:
 ```
 create-mithril-app <directory>
 cd <directory>
@@ -14,11 +10,18 @@ npm install
 npm run dev
 ```
 
-This would create a mithril.js project in the directory specified, install the appopriate modules, and run the skeleton app on port 8020. Open your browser to http://localhost:8020 and you should see a `Hello World !!` screen.
+This creates a mithril.js project in the directory specified, install the appopriate modules, and run the skeleton app on port 8020. Open your browser to http://localhost:8020 and you should see a sample mini-app running. It is set up with webpack-dev-server, so when you start editing the code, your browser would reflect the changes instantly.
 
-This mithril.js project is set up with webpack-dev-server, so when you start editing the project with your favorite code editor, your browser would reflect the changes instantly.
+# Table of Contents
 
-**Note** create-mithril-app can also be run using `npx`
+* [Purpose](##purpose)
+* [Usage](##usage)
+* [Project Structure](##project-structure)
+* [Configuration](##configuration)
+* [Build](##build)
+* [Server-side API](##server-side-api)
+* [Release Logs](##release-logs)
+
 
 ## Purpose
 
@@ -31,7 +34,17 @@ I feel mithril.js can benefit from a battery-included tool to set up a project. 
 
 Hopefully this can lower the barrier for new developers to try out mithril, and simplify the mundane task of creating a new project for seasoned developers.
 
-## Project structure ##
+## Usage
+
+* `create-mithril-app <directory>` - creates a skeleton app with mithril.js and webpack set up in the <directory> specified.
+* `create-mithril-app api <directory>` - creates a sample backend application in the <directory> specified. This sample application can serve API for the mithril.js app.
+* `create-mithril-app download <sample-mithril-app|sample-mithril-api> <version>` - explicitly downloads a sample template into the cache. This is usually not necessary, unless you want to use a specific version of the template
+* `create-mithril-app rm <sample-mithril-app|sample-mithril-api>` - removes the corresponding sample template from the cache.
+* The cache resides at `~/.create-mithril-app` directory
+
+## Project structure
+
+The skeleton project created by `create-mithril-app` has the following structure.
 
 * `client` - the directory for source JS files
 * `public` - the directory for static files (html, css etc.)
