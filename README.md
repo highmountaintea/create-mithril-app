@@ -1,6 +1,4 @@
-# create-mithril-app
-
-Sets up a mithril.js project for you, with webpack already configured.
+**create-mithril-app** sets up a mithril.js project for you, with webpack already configured.
 
 Install with `npm i -g create-mithril-app`, then type the following:
 ```
