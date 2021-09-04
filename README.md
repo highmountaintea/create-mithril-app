@@ -54,11 +54,11 @@ The skeleton project created by `create-mithril-app` has the following structure
 
 ## Configuration
 
-The created project comes with two webpack files, one for development, one for build. They can be configured further to suit your needs. *Please be aware we cannot support all these different configurations*
+The created project comes with two webpack files, one for development, one for production build. They can be configured further to suit your needs. *Please be aware we cannot support all these different configurations*
 
 ## Build
 
-`npm run build` would create the deployable files in the build directory.
+`npm run build` creates the deployable files in the build directory.
 
 ## Server-side API
 
