@@ -14,13 +14,13 @@ This creates a mithril.js project in the directory specified, install the appopr
 
 # Table of Contents
 
-* [Purpose](##purpose)
-* [Usage](##usage)
-* [Project Structure](##project-structure)
-* [Configuration](##configuration)
-* [Build](##build)
-* [Server-side API](##server-side-api)
-* [Release Logs](##release-logs)
+* [Purpose](#purpose)
+* [Usage](#usage)
+* [Project Structure](#project-structure)
+* [Configuration](#configuration)
+* [Build](#build)
+* [Server-side API](#server-side-api)
+* [Release Logs](#release-logs)
 
 
 ## Purpose
