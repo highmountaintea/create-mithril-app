@@ -53,6 +53,7 @@ The created project comes with two webpack files, one for development, one for b
 
 ## Release Logs
 
+* 2.1.0 - decouples from `sample-mithril-app` dependency. User can now fetch the latest `sample-mithril-app` without needing to update `create-mithril-app` every time.
 * 2.0.1 - now uses mithril v2
 * 1.0.25 - now supports creating a new app into an empty directory
 * 1.0.24 - updated to webpack 4
